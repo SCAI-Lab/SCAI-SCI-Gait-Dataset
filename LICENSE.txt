@@ -1,0 +1,26 @@
+Software Copyright License for non-commercial scientific research purposes
+
+Please read carefully the following terms and conditions and any accompanying documentation before you download and/or use the SCAI-SCI Gait Dataset & Software (the "Dataset & Software"). By downloading and/or using the Dataset & Software, you acknowledge that you have read these terms and conditions, understand them, and agree to be bound by them. If you do not agree to these terms and conditions, you must not download and/or use the Dataset & Software.
+
+1. Purpose
+The Dataset & Software is provided for non-commercial scientific research, education, and non-commercial artistic purposes only. Any commercial use of the Dataset & Software is strictly prohibited. Commercial use includes, but is not limited to, incorporation into commercial products, use in commercial services, or training algorithms for commercial purposes. For commercial licensing, please contact the authors.
+
+2. License Grant
+The Licensors (ETH Zürich and Swiss Paraplegic Centre, Nottwil) hereby grant you a personal, non-exclusive, non-transferable, free-of-charge license to use the Dataset & Software for non-commercial scientific research purposes.
+
+3. Restrictive Use
+You may not:
+- Use the Dataset & Software for any commercial purpose (including but not limited to integration into commercial products or services).
+- Use the Dataset & Software for military, surveillance, or pornographic purposes.
+- Redistribute the Dataset & Software, in whole or in part, to any third party (you may direct others to the official repository/website).
+- Attempt to re-identify any subjects in the dataset.
+- Create fake, misleading, or defamatory content.
+
+4. Intellectual Property
+The Dataset & Software and all intellectual property rights therein remain the property of the Licensors (or the respective contributors).
+
+5. Warranty Disclaimer
+THE DATASET & SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE LICENSORS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.
+
+6. Termination
+This license terminates automatically if you fail to comply with its terms. Upon termination, you must destroy all copies of the Dataset & Software.

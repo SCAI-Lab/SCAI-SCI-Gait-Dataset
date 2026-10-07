@@ -1,0 +1,95 @@
+file,variable,label,type,units,coding,standard
+trials.csv,studyID,participant number in this release (drawn for it; joins every file and table of the release),,,applies to: all,this dataset
+trials.csv,modality,"mocap: marker, analog and force-plate recording (.c3d); smpl: SMPL body-model sequence (.pkl) estimated from the sagittal video (not released); smpl_video: that sequence rendered on a black background (.mp4)",,,applies to: all,this dataset
+trials.csv,file,path of the file inside the release,,,applies to: all,this dataset
+trials.csv,trial,"trial number of the recording session, from the file name",,,applies to: mocap,this dataset
+trials.csv,direction,walking direction tag of the video as the lab named it: li (links) or re (rechts),,,"applies to: smpl, smpl_video",this dataset
+trials.csv,direction_source,"'file name' when the source named it, 'inferred' from the body orientation otherwise",,,applies to: smpl,this dataset
+trials.csv,direction_check,set when the orientation disagrees with the direction in the file name,,,applies to: smpl,this dataset
+trials.csv,n_frames,mocap: point frames; smpl: frames in the sequence; smpl_video: frames of the render,,,applies to: all,this dataset
+trials.csv,duration_s,mocap: n_frames / point_rate_hz; smpl_video: n_frames / video_fps,,,"applies to: mocap, smpl_video",this dataset
+trials.csv,video_fps,frame rate of the render and of the source video (15 fps); SMPL frame_ids count these frames,,,applies to: smpl_video,this dataset
+trials.csv,video_width,"width in pixels, as the source video (1920 or 720)",,,applies to: smpl_video,this dataset
+trials.csv,video_height,"height in pixels, as the source video (1088 or 576)",,,applies to: smpl_video,this dataset
+trials.csv,linked_file,"the render of an SMPL sequence, and the sequence of a render; which MoCap trial they belong to is not recorded",,,"applies to: smpl, smpl_video",this dataset
+trials.csv,point_rate_hz,"marker sampling rate (100, 200 or 246 Hz)",,,applies to: mocap,this dataset
+trials.csv,analog_rate_hz,analog sampling rate of EMG and force plates (500 to 2000 Hz),,,applies to: mocap,this dataset
+trials.csv,markers_complete_pct,percent of frames in which all 20 markers are present; a missing marker sample is NaN,,,applies to: mocap,this dataset
+trials.csv,markers_with_gaps,number of the 20 markers missing in at least one frame,,,applies to: mocap,this dataset
+trials.csv,worst_marker_missing_pct,percent of frames missing for the least complete marker,,,applies to: mocap,this dataset
+trials.csv,missing_markers,protocol markers absent from the whole recording (NaN throughout),,,applies to: mocap,this dataset
+trials.csv,n_analog_channels,analog channels in the file,,,applies to: mocap,this dataset
+trials.csv,emg_muscles,"EMG channels by muscle, L/R side first, semicolon-separated (raw signal, volts, at analog_rate_hz); empty = no EMG in this trial",,,applies to: mocap,this dataset
+trials.csv,n_emg_channels,number of EMG channels,,,applies to: mocap,this dataset
+trials.csv,n_force_plates,"force plates in the file (FORCE_PLATFORM.USED); type 4: six channels each, forces and moments from CAL_MATRIX",,,applies to: mocap,this dataset
+trials.csv,force_plate_channels,"named: channels labelled Fx_FP1..Mz_FP2 (analog 1-6 and 9-14); generic: labelled Channel_NN, plate 1 on Channel_02-07 and plate 2 on Channel_09-14 as FORCE_PLATFORM.CHANNEL assigns them (checked against the signals)",,,applies to: mocap,this dataset
+trials.csv,force_plate_map,"ok, or what is wrong with FORCE_PLATFORM.CHANNEL (a channel assigned twice leaves a plate short of a component)",,,applies to: mocap,this dataset
+trials.csv,other_analog_channels,"analog channels that are neither EMG nor force plate: Sync; in named files Channel_07 and Channel_08 (not identified); in generic files Channel_01 (flat, unused) and Channel_08",,,applies to: mocap,this dataset
+trials.csv,analog_units,units declared for the analog channels (V; N on some channels of a few files),,,applies to: mocap,this dataset
+trials.csv,analog_nan_max_pct,largest percent of NaN samples over the analog channels (a short tail at the end of the recording),,,applies to: mocap,this dataset
+trials.csv,n_trigger_events,"entries in the EVENT group, all labelled 'Trigger event' (not gait events)",,,applies to: mocap,this dataset
+trials.csv,frame_first,"first video frame of the sequence (frame_ids, 15 fps); sequences are trimmed",,,applies to: smpl,this dataset
+trials.csv,frame_last,last video frame of the sequence,,,applies to: smpl,this dataset
+trials.csv,frame_gaps,"places where frame_ids skip; time must come from frame_ids, not a fixed rate",,,applies to: smpl,this dataset
+trials.csv,frames_skipped,video frames missing inside the sequence,,,applies to: smpl,this dataset
+trials.csv,has_metadata,1 when the participant has a row in metadata/medical_metadata.csv,,,applies to: all,this dataset
+metadata/cohort_counts_etiology.csv,injurycharacter_injury_etiology,"band or category of injurycharacter_injury_etiology, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_etiology.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_height.csv,clinicaldata_height,"band or category of clinicaldata_height, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_height.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_loi.csv,injurycharacter_loi,"band or category of injurycharacter_loi, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_loi.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_rehab.csv,time_in_rehab,"band or category of time_in_rehab, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_rehab.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_subcat.csv,injurycharacter_subcat,"band or category of injurycharacter_subcat, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_subcat.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_weight.csv,clinicaldata_weight,"band or category of clinicaldata_weight, released only as counts",category,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+metadata/cohort_counts_weight.csv,n,participants in the band or category,integer,,counted over every released participant (not recorded included); a band a-b holds the values a to b inclusive,this dataset
+MoCap_Data/*.c3d,POINT,"20 lower-body markers (pelvis, thigh, shank, foot), fixed order",time series,mm,"rate per file in trials.csv (100, 200 or 246 Hz); a missing sample is NaN; completeness per trial in trials.csv",C3D
+MoCap_Data/*.c3d,ANALOG: EMG,"surface EMG, raw",time series,V,channels labelled by muscle and side (e.g. L Tibialis Anterior); which muscles per trial in trials.csv emg_muscles; rate = analog_rate_hz,C3D
+MoCap_Data/*.c3d,ANALOG: force plates,"two force plates, six channels each (Fx Fy Fz Mx My Mz)",time series,V,FORCE_PLATFORM TYPE 4: forces and moments = CAL_MATRIX x channels; which channels per trial in trials.csv force_plate_channels,C3D
+MoCap_Data/*.c3d,ANALOG: other,Sync and unidentified channels,time series,V,listed per trial in trials.csv other_analog_channels,C3D
+MoCap_Data/*.c3d,FORCE_PLATFORM,plate geometry and calibration,parameters,mm,"USED, TYPE, CHANNEL, CORNERS, ORIGIN, CAL_MATRIX, ZERO",C3D
+MoCap_Data/*.c3d,EVENT,"acquisition trigger events ('Trigger event'), not gait events",parameters,s,count per trial in trials.csv n_trigger_events; gait events are not annotated,C3D
+SMPL_Data/*.pkl,frame_ids,video frame number of each row (video at 15 fps: time = frame_ids / 15),int64 [F],,"sequences are trimmed and may skip frames: take time from frame_ids, not from the row number",this dataset
+SMPL_Videos/*.mp4,render,the SMPL sequence of the same name rendered as a mesh on a black background; no camera image,H.264 MP4,"px, 15 fps","frame size of the source video (1920x1088 or 720x576); container creation times zero, only the encoder tag",this dataset
+SMPL_Data/*.pkl,global_orient,root orientation,"float [F,3]",rad,axis-angle; Y-up,SMPL
+SMPL_Data/*.pkl,body_pose,joint rotations of 23 body joints,"float32 [F,69]",rad,axis-angle,SMPL
+SMPL_Data/*.pkl,betas,"body shape coefficients, per frame","float32 [F,10]",,vary frame to frame: average over the sequence for one shape,SMPL
+SMPL_Data/*.pkl,trans,root translation,"float32 [F,3]",m,all zeros: the sequences are root-relative,SMPL
+SMPL_Data/*.pkl,joints,24 SMPL joint positions,"float32 [F,24,3]",m,"root-relative, Y-up",SMPL
+SMPL_Data/*.pkl,vertices,SMPL mesh vertices,"float32 [F,6890,3]",m,"root-relative, Y-up",SMPL
+gait_parameters.csv,studyID,participant number in this release,integer,,joins every file and table of the release,this dataset
+gait_parameters.csv,trial,trial number of the recording session,integer,,from the MoCap file name; joins trials.csv with studyID,this dataset
+gait_parameters.csv,file,the trial these parameters come from,string,,path within the release; joins trials.csv,this dataset
+gait_parameters.csv,status,why a field is empty,categorical,,ok; markers missing; no travel (stationary trial); no stride detected,this dataset
+gait_parameters.csv,n_strides_left,"strides detected, left",integer,count,consecutive left heel strikes 0.5-3.0 s apart,"Zeni et al., Gait Posture 2008"
+gait_parameters.csv,n_strides_right,"strides detected, right",integer,count,consecutive right heel strikes 0.5-3.0 s apart,"Zeni et al., Gait Posture 2008"
+gait_parameters.csv,walking_speed_m_s,walking speed,float,m/s,"pelvis travel along the direction of progression between the first and last heel strike. The closest equivalent this dataset has to a 10-metre walk test, which was not performed","NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,cadence_steps_min,cadence,float,steps/min,120 / mean stride time,"NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,stride_time_s,stride time,float,s,mean over both sides,"NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,stride_time_cv,stride-time variability,float,,standard deviation / mean; empty below three strides,"NINDS SCI CDE, supplemental (gait variability)"
+gait_parameters.csv,stride_length_m,stride length,float,m,"heel travel along the direction of progression over one stride, mean over both sides","NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,step_length_left_m,"step length, left",float,m,distance from the right to the left heel along the direction of progression at left heel strike,"NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,step_length_right_m,"step length, right",float,m,the same at right heel strike,"NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,step_length_asymmetry,step-length asymmetry,float,,|left - right| / mean; 0 is symmetric,"NINDS SCI CDE, supplemental"
+gait_parameters.csv,step_width_m,step width,float,m,distance between the heels across the direction of progression at heel strike,"NINDS SCI CDE, supplemental (stride analysis)"
+gait_parameters.csv,stance_pct_left,"stance phase, left",float,% of stride,heel strike to the next toe-off,"NINDS SCI CDE, supplemental"
+gait_parameters.csv,stance_pct_right,"stance phase, right",float,% of stride,heel strike to the next toe-off,"NINDS SCI CDE, supplemental"
+gait_parameters.csv,swing_pct_left,"swing phase, left",float,% of stride,100 - stance,"NINDS SCI CDE, supplemental"
+gait_parameters.csv,swing_pct_right,"swing phase, right",float,% of stride,100 - stance,"NINDS SCI CDE, supplemental"
+gait_parameters.csv,double_support_pct,double support,float,% of stride,left stance + right stance - 100,"NINDS SCI CDE, supplemental"
+metadata/medical_metadata.csv,studyID,participant pseudonym,integer,,joins every file of the release,this dataset
+metadata/medical_metadata.csv,sex,sex assigned at birth,categorical,,female; male,ISCoS Core Data Set v3.0
+metadata/medical_metadata.csv,age_group_iscos,age at examination,categorical,years,15-29; 30-44; 45-59; 60-74; 75+,"ISCoS Core Data Set v3.0, reporting groups"
+metadata/medical_metadata.csv,neurologic_category,neurologic category from the NLI and the AIS,categorical,,C1-4 AIS ABC; C5-8 AIS ABC; T1-S5 AIS ABC; AIS D any level; AIS E (no deficit),"ISCoS Core Data Set, standardisation of reporting (DeVivo et al. 2011)"
+metadata/medical_metadata.csv,neurological_level_region,region of the neurological level of injury,categorical,,C1-4; C5-8; T1-S5; intact. The NLI itself is in cohort_counts_loi.csv only,ISCoS Core Data Set v3.0
+metadata/medical_metadata.csv,ais_complete,completeness of the injury,categorical,,complete (AIS A); incomplete (AIS B-E),"ISCoS Core Data Set v3.0, AIS coarsened"
+metadata/medical_metadata.csv,etiology_class,etiology,categorical,,traumatic; non-traumatic. The Core etiology codes are in cohort_counts_etiology.csv,"ISCoS Core Data Set v3.0, grouped"
+metadata/medical_metadata.csv,years_since_injury_group,time from injury to the examination,categorical,years,<1; 1-4; 5-9; 10-14; 15-19; 20-24; 25-29; 30+,"ISCoS Core Data Set v3.0, reporting groups"
+metadata/medical_metadata.csv,lems_band,"lower-extremity motor score, 10-point band",categorical,points,"0-9; 10-19; 20-29; 30-39; 40-50 (sum of the ten L2-S1 key muscles, 0-50); empty unless all ten are graded","ISNCSCI (NINDS SCI CDE, core)"
+metadata/medical_metadata.csv,scim_mobility_band,"SCIM III mobility: indoors, moderate distances, outdoors, stairs, wheelchair-car and ground-wheelchair transfers; total as recorded, 10-point band",categorical,points,0-9; 10-19; 20-30,"SCIM III (NINDS SCI CDE, supplemental)"
+metadata/medical_metadata.csv,walking_aid,walking condition during the examination,categorical,,barefoot; shoes; with aid (crutches or a walking stick),this dataset
+metadata/medical_metadata.csv,care_setting,care setting at the examination,categorical,,inpatient; outpatient,this dataset
+metadata/medical_metadata.csv,vibration_sense,"deep (vibration) sensation, lower limbs",categorical,,normal; deviating,this dataset
+metadata/medical_metadata.csv,spasticity_mas,"lower-limb spasticity, Modified Ashworth Scale, grouped",categorical,MAS grade,0; 1-1+; 2-4,Modified Ashworth Scale

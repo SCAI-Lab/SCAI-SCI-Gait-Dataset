@@ -1,0 +1,80 @@
+cff-version: 1.2.0
+message: "If you use this dataset or its software, please cite it as below, and the papers in references."
+type: dataset
+title: "SCAI-SCI Gait Dataset"
+abstract: >-
+  Laboratory motion capture, force plates, surface EMG, and video-derived SMPL body models of
+  walking in 240 adults with spinal cord injury, with a clinical table standardized to the
+  International SCI Core Data Set v3.0.
+# TODO(release): version, date-released and the PhysioNet DOI from the published project
+repository-code: "https://github.com/SCAI-Lab/SCAI-SCI-Gait-Dataset"
+url: "https://physionet.org/content/scai-sci-gait-dataset"
+license-url: "https://github.com/SCAI-Lab/SCAI-SCI-Gait-Dataset/blob/main/LICENSE.txt"
+authors:
+  - family-names: Paez-Granados
+    given-names: Diego
+    email: diego.paez@hest.ethz.ch
+    affiliation: "Spinal Cord Artificial Intelligence (SCAI) Lab, ETH Zürich, Zürich, Switzerland; Swiss Paraplegic Research, Swiss Paraplegic Centre, Nottwil, Switzerland; University of Tsukuba, Tsukuba, Ibaraki, Japan"
+  - family-names: Natraj
+    given-names: Shreyasvi
+    email: shreyasvi.natraj@hest.ethz.ch
+    affiliation: "Spinal Cord Artificial Intelligence (SCAI) Lab, ETH Zürich, Zürich, Switzerland; Swiss Paraplegic Research, Swiss Paraplegic Centre, Nottwil, Switzerland"
+  - family-names: Kupper
+    given-names: Lucas
+    affiliation: "ETH Zürich, Zürich, Switzerland"
+  - family-names: Ruepp
+    given-names: Mathieu Vincent
+    affiliation: "Spinal Cord Artificial Intelligence (SCAI) Lab, ETH Zürich, Zürich, Switzerland; Swiss Paraplegic Research, Swiss Paraplegic Centre, Nottwil, Switzerland"
+  - family-names: Amrein
+    given-names: Sabrina
+    affiliation: "ETH Zürich, Zürich, Switzerland"
+  - family-names: Eriks-Hoogland
+    given-names: Inge
+    affiliation: "Swiss Paraplegic Research, Swiss Paraplegic Centre, Nottwil, Switzerland; Faculty of Health Sciences and Medicine, University of Lucerne, Lucerne, Switzerland; Swiss Paraplegic Centre, Nottwil, Switzerland"
+keywords:
+  - spinal cord injury
+  - gait analysis
+  - motion capture
+  - SMPL
+  - human mesh recovery
+references:
+  - type: article
+    title: "Monocular markerless biomechanics for clinically interpretable gait assessment in spinal cord injury"
+    authors:
+      - family-names: Natraj
+        given-names: Shreyasvi
+      - family-names: Ruepp
+        given-names: Mathieu
+      - family-names: Li
+        given-names: Yanke
+      - family-names: Riener
+        given-names: Robert
+      - family-names: Eriks-Hoogland
+        given-names: Inge
+      - family-names: Paez-Granados
+        given-names: Diego
+    journal: "arXiv preprint arXiv:2610.05552"
+    year: 2026
+    doi: "10.48550/arXiv.2610.05552"
+    url: "https://arxiv.org/abs/2610.05552"
+  - type: article
+    title: "3D pose estimation for scalable remote gait kinematics assessment"
+    authors:
+      - family-names: Natraj
+        given-names: Shreyasvi
+      - family-names: Messmer
+        given-names: Témi
+      - family-names: Fujii
+        given-names: Yoshiori
+      - family-names: Suzuki
+        given-names: Kenji
+      - family-names: Riener
+        given-names: Robert
+      - family-names: Eriks-Hoogland
+        given-names: Inge
+      - family-names: Paez-Granados
+        given-names: Diego
+    journal: "npj Digital Medicine"
+    year: 2025
+    doi: "10.1038/s41746-025-02211-y"
+    url: "https://www.nature.com/articles/s41746-025-02211-y"

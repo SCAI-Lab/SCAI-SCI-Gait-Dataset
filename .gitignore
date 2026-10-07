@@ -1,0 +1,54 @@
+# Patient data never goes in git. The release is distributed through PhysioNet; keep it
+# outside this repository. CI (.github/workflows/no-participant-data.yml) enforces this.
+RELEASE_*/
+MoCap_Data/*
+SMPL_Data/*
+SMPL_Videos/*
+!MoCap_Data/README.md
+!SMPL_Data/README.md
+!SMPL_Videos/README.md
+metadata/*
+!metadata/README.md
+!metadata/data_dictionary.csv
+clinical/
+/trials.csv
+/gait_parameters.csv
+/manifest.sha256
+*_report.txt
+*.c3d
+*.pkl
+*.npz
+*.npy
+*.mp4
+*.avi
+*.mov
+*.obj
+*.xlsx
+*.zip
+*.tar
+*.gz
+*.7z
+
+# SMPL model files (separate licence)
+smpl_model/
+smpl_models/
+archive/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editors and agents
+.vscode/
+.idea/
+.agents/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
