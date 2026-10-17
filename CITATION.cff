@@ -8,7 +8,7 @@ abstract: >-
   International SCI Core Data Set v3.0.
 # TODO(release): version, date-released and the PhysioNet DOI from the published project
 repository-code: "https://github.com/SCAI-Lab/SCAI-SCI-Gait-Dataset"
-url: "https://physionet.org/content/scai-sci-gait-dataset"
+url: "https://physionet.org/content/scai-sci-gait/1.0.0/"
 license-url: "https://github.com/SCAI-Lab/SCAI-SCI-Gait-Dataset/blob/main/LICENSE.txt"
 authors:
   - family-names: Paez-Granados

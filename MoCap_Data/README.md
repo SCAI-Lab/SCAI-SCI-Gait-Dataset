@@ -1,7 +1,7 @@
 # Optical Motion Capture & Force Plates (MoCap_Data/) — SCAI-SCI Gait Dataset
 
 Optoelectronic lower-body motion capture with two force plates and, in most trials,
-surface EMG, as part of the **SCAI-SCI Gait Dataset**. The data files are distributed through [PhysioNet](https://physionet.org/content/scai-sci-gait-dataset), not in this repository.
+surface EMG, as part of the **SCAI-SCI Gait Dataset**. The data files are distributed through [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/), not in this repository.
 
 ## Files
 

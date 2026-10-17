@@ -7,7 +7,7 @@ assembled them into one sequence per video. Of five mesh-recovery methods benchm
 this cohort, CameraHMR reconstructed the most frames with near-lowest joint error; see
 [Why CameraHMR](../README.md#why-camerahmr).
 
-The files are in the [PhysioNet](https://physionet.org/content/scai-sci-gait-dataset) release, not in this repository. The source videos are not
+The files are in the [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/) release, not in this repository. The source videos are not
 released.
 
 ## Files

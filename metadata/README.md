@@ -2,7 +2,7 @@
 
 The **SCAI-SCI Gait Dataset** `metadata/` folder holds the clinical table, the data dictionary, and six
 cohort-count tables. Only the data dictionary is in this repository. The table and the
-counts are patient data and are distributed through [PhysioNet](https://physionet.org/content/scai-sci-gait-dataset).
+counts are patient data and are distributed through [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/).
 
 | File | In this repository | Content |
 |:---|:---:|:---|

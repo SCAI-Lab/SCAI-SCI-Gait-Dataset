@@ -7,7 +7,7 @@
 <!-- Publications & Data Access -->
 [![arXiv: 2610.05552](https://img.shields.io/badge/arXiv-2610.05552-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.05552)
 [![Paper: npj Digital Medicine](https://img.shields.io/badge/Paper-npj%20Digital%20Medicine-00599C?style=flat-square&logo=springer&logoColor=white)](https://doi.org/10.1038/s41746-025-02211-y)
-[![PhysioNet: Credentialed Access](https://img.shields.io/badge/PhysioNet-Credentialed%20Access-4B0082?style=flat-square)](https://physionet.org/content/scai-sci-gait-dataset)
+[![PhysioNet: Credentialed Access](https://img.shields.io/badge/PhysioNet-Credentialed%20Access-4B0082?style=flat-square)](https://physionet.org/content/scai-sci-gait/1.0.0/)
 
 <br/>
 
@@ -24,7 +24,7 @@
 > [!IMPORTANT]
 > **The data are not hosted in this repository.** The optical motion capture trials, SMPL body model sequences,
 > 3D renders, and clinical metadata contain sensitive patient information. They are distributed through
-> **[PhysioNet](https://physionet.org/content/scai-sci-gait-dataset)** as credentialed-access data, under a Data Use Agreement
+> **[PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/)** as credentialed-access data, under a Data Use Agreement
 > that strictly prohibits any attempt to identify or re-identify a participant.
 >
 > This repository provides the official documentation, complete data dictionary, interactive 3D viewers, data loading
@@ -255,7 +255,7 @@ CameraHMR pipeline also needs `torch`, `pytorch3d` and `smplx`; see
 ## Getting the data
 
 1. Get credentialed access on
-   [PhysioNet](https://physionet.org/content/scai-sci-gait-dataset) and sign the data use agreement.
+   [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/) and sign the data use agreement.
 2. Download the release and check it:
    ```bash
    cd RELEASE_v1.5_SCAI-SCI-Gait
@@ -429,7 +429,7 @@ If you use the dataset or the code, please cite the dataset:
   year         = {2026},
   note         = {Version 1.0},
   doi          = {10.13026/TODO},
-  url          = {https://physionet.org/content/scai-sci-gait-dataset}
+  url          = {https://physionet.org/content/scai-sci-gait/1.0.0/}
 }
 ```
 

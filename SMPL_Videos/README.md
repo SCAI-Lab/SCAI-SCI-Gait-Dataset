@@ -4,7 +4,7 @@ Each SMPL sequence in the **SCAI-SCI Gait Dataset** rendered as a video: a grey 
 renders contain no camera image. SMPL is a template mesh without texture or facial
 geometry, fitted to defaced video.
 
-The files are in the [PhysioNet](https://physionet.org/content/scai-sci-gait-dataset) release, not in this repository.
+The files are in the [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/) release, not in this repository.
 
 ## Files
 
