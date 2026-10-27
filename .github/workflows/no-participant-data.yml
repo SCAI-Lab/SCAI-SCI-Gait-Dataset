@@ -1,0 +1,28 @@
+# Fails any push or pull request that adds participant data to this repository.
+# The data are distributed through PhysioNet under a data use agreement, never here.
+name: no participant data
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No data files are tracked
+        run: |
+          bad=$(git ls-files | grep -Ei '\.(c3d|pkl|npz|npy|mp4|avi|mov|obj|mat|trc|xlsx|xls|parquet|tsv|zip|tar|gz|7z|pdf|html)$' || true)
+          if [ -n "$bad" ]; then echo "::error::data files tracked:"; echo "$bad"; exit 1; fi
+      - name: Only allowed tables are tracked
+        run: |
+          # The only CSV in this repository is the data dictionary.
+          bad=$(git ls-files '*.csv' | grep -vx 'metadata/data_dictionary.csv' || true)
+          if [ -n "$bad" ]; then echo "::error::table not allowed in this repository:"; echo "$bad"; exit 1; fi
+      - name: The dictionary holds no rows of participants
+        run: |
+          f=metadata/data_dictionary.csv
+          head -1 "$f" | grep -qx 'file,variable,label,type,units,coding,standard' \
+            || { echo "::error::$f is not the data dictionary"; exit 1; }
+          if cut -d, -f2 "$f" | grep -qiE '^(studyid|participant)' && [ "$(wc -l < "$f")" -gt 150 ]; then
+            echo "::error::$f is unexpectedly long"; exit 1
+          fi

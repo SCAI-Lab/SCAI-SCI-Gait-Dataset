@@ -1,0 +1,8 @@
+# Reading the data and running the viewers (Python >= 3.10)
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+ezc3d>=1.5
+
+# Regenerating SMPL sequences (scripts/camerahmr_pipeline.py) additionally needs:
+#   scipy, torch, smplx, pytorch3d  (install pytorch3d following its own instructions)
