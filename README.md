@@ -2,12 +2,12 @@
 
 <div align="center">
 
-### Multi-Modal Clinical Benchmark of Walking in Spinal Cord Injury: Optical Motion Capture, Ground Reaction Forces, Surface EMG, and Video-Derived SMPL 3D Body Models
+### Motion Capture of Overground Walking in Adults with Spinal Cord Injury
 
 <!-- Publications & Data Access -->
 [![arXiv: 2610.05552](https://img.shields.io/badge/arXiv-2610.05552-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.05552)
 [![Paper: npj Digital Medicine](https://img.shields.io/badge/Paper-npj%20Digital%20Medicine-00599C?style=flat-square&logo=springer&logoColor=white)](https://doi.org/10.1038/s41746-025-02211-y)
-[![PhysioNet: Under Review](https://img.shields.io/badge/PhysioNet-Under%20Review-orange?style=flat-square)](https://physionet.org/content/scai-sci-gait/1.0.0/)
+[![PhysioNet: Under Review](https://img.shields.io/badge/PhysioNet-Under%20Review-orange?style=flat-square)](https://physionet.org/content/scai-sci-gait/)
 
 <br/>
 
@@ -24,7 +24,7 @@
 > [!IMPORTANT]
 > **The data are not hosted in this repository.** The optical motion capture trials, SMPL body model sequences,
 > 3D renders, and clinical metadata contain sensitive patient information. The dataset release is currently under
-> review at **[PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/)** for credentialed access under a Data Use Agreement
+> review at **[PhysioNet](https://physionet.org/content/scai-sci-gait/)** for credentialed access under a Data Use Agreement
 > that strictly prohibits any attempt to identify or re-identify a participant.
 >
 > This repository provides the official documentation, complete data dictionary, interactive 3D viewers, data loading
@@ -106,7 +106,8 @@ RELEASE_v1.5_SCAI-SCI-Gait/                                            4.3 GB
 │   └── cohort_counts_*.csv    6 attributes released only as counts
 ├── trials.csv       one row per released file (899 rows)
 ├── gait_parameters.csv  one row per MoCap trial (300 rows)
-└── manifest.sha256  SHA-256 of every file (909 entries)
+├── README.md        the release description, as on PhysioNet
+└── manifest.sha256  SHA-256 of every file (910 entries)
 ```
 
 All modalities link via **`studyID`**, which forms the prefix of every file name. It is a pseudorandomized number drawn
@@ -258,7 +259,7 @@ CameraHMR pipeline also needs `torch`, `pytorch3d` and `smplx`; see
 > The dataset release is currently under review at PhysioNet. Access will be enabled upon completion of the review.
 
 1. Get credentialed access on
-   [PhysioNet](https://physionet.org/content/scai-sci-gait/1.0.0/) and sign the data use agreement once published.
+   [PhysioNet](https://physionet.org/content/scai-sci-gait/) and sign the data use agreement once published.
 2. Download the release and check it:
    ```bash
    cd RELEASE_v1.5_SCAI-SCI-Gait
@@ -412,7 +413,10 @@ in SCI:
   title     = {3D pose estimation for scalable remote gait kinematics assessment},
   author    = {Natraj, Shreyasvi and Messmer, T{\'e}mi and Fujii, Yoshiori and Suzuki, Kenji and Riener, Robert and Eriks-Hoogland, Inge and Paez-Granados, Diego},
   journal   = {npj Digital Medicine},
+  volume    = {9},
+  pages     = {37},
   year      = {2025},
+  month     = dec,
   publisher = {Nature Publishing Group UK},
   doi       = {10.1038/s41746-025-02211-y},
   url       = {https://www.nature.com/articles/s41746-025-02211-y}
@@ -421,16 +425,16 @@ in SCI:
 
 If you use the dataset or the code, please cite the dataset:
 
-<!-- TODO(release): version, year and DOI from the published PhysioNet project -->
+<!-- TODO(release): the DOI from the published PhysioNet project -->
 ```bibtex
 @misc{scai_sci_gait_dataset,
-  title        = {{SCAI-SCI Gait Dataset}: laboratory motion capture, force plates, EMG and video-derived SMPL body models of walking in people with spinal cord injury},
+  title        = {{SCAI-SCI Gait Dataset}: Motion Capture of Overground Walking in Adults with Spinal Cord Injury},
   author       = {Paez-Granados, Diego and Natraj, Shreyasvi and Kupper, Lucas and Ruepp, Mathieu Vincent and Amrein, Sabrina and Eriks-Hoogland, Inge},
   howpublished = {PhysioNet},
   year         = {2026},
-  note         = {Version 1.0},
+  note         = {Version 1.5},
   doi          = {10.13026/TODO},
-  url          = {https://physionet.org/content/scai-sci-gait/1.0.0/}
+  url          = {https://physionet.org/content/scai-sci-gait/}
 }
 ```
 
